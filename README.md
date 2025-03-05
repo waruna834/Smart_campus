@@ -1,47 +1,68 @@
 # Smart_campus
 "Software development management" subject group project. Group no 3. (Kingston University 1 year topup degree - software engineering)
 
-📌 Project Overview
+## Overview
+The Smart Campus Management System is designed to streamline the management of campus resources, schedules, and communication between students, lecturers, and administrators. This system provides a user-friendly interface for different user roles, including Super Admin, Admin, Students, and Lecturers.
 
-The Smart Campus Management System is a web-based platform designed to streamline university operations, enhance collaboration, and improve campus engagement. This system allows students, lecturers, and administrators to interact with various features, such as event management, resource booking, messaging, and scheduling.
+## Features
 
-🚀 Features
+### Super Admin Features
+- **User  Management**
+  - Send login credentials to users (Admins, Students, Lecturers).
+  - View and manage registered user details (delete and modify).
+  - Review new user registration requests and details.
 
-1️⃣ User Management
+- **Program Schedule Management**
+  - View program schedules created by Admins.
 
-Role-based access control (Students, Lecturers, Admins, Super Admin)
-Secure login and authentication
-Super Admin can manage Admins
+- **Messaging System**
+  - Communicate with Admins via text and file sharing.
+  - View messages from Admins.
 
-2️⃣ Event Management
+- **Announcements**
+  - Add and remove announcements on the system homepage.
 
-Admins can create, view, and delete events
-Students can register for events (one-time only, with attendee limits)
-Real-time event capacity tracking
+### Admin Features
+- **Program Schedule Management**
+  - Create, delete, and change the status of program schedules.
 
-3️⃣ Attendance Management
+- **Subject Management**
+  - View registered subjects for Lecturers and Students.
 
-Students can mark attendance for events
+- **Resource Management**
+  - Manage campus resources, including classrooms and other facilities.
 
-Admin can manage attendance records
+- **Messaging System**
+  - Communicate with Lecturers, Super Admin, and Students.
 
-4️⃣ Resource Booking
+- **Event Management**
+  - Add events to the system for Students.
 
-Lecturers request resources via messaging
+### Student Features
+- **Program Schedule**
+  - View the program schedule.
 
-Admins manually update resource status
+- **Subject Registration**
+  - Register for subjects.
 
-5️⃣ Messaging System
+- **Event Registration**
+  - Register for events.
 
-Role-based messaging between Students, Lecturers, and Admins
-Secure message storage
+- **Resource Access**
+  - View available resources.
 
-6️⃣ Scheduling System
+- **Messaging System**
+  - Communicate with Admins and Lecturers.
 
-Students and Lecturers can view academic schedules
-Admins can update schedules
+### Lecturer Features
+- **Program Schedule**
+  - View the program schedule.
 
-7️⃣ Dashboard & Reports
+- **Messaging System**
+  - Communicate with Admins and Students.
 
-Admins can view real-time reports on events, resources, and user activities
-Data visualization using charts
+- **Subject Assignment**
+  - Assign new subjects.
+
+- **Resource Access**
+  - View available resources.

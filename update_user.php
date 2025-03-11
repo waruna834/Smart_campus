@@ -2,7 +2,7 @@
 //for registered users email and user name changes (only super admin can accessed)
 session_start();
 
-// Check if the user is logged in and is a student
+// Check if the user is logged in and is a super admin
 if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'super_admin') {
     header("Location: all_admin_login.php");
     exit;

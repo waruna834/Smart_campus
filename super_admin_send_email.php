@@ -41,13 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['delete_user'])) {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // SMTP server
             $mail->SMTPAuth = true;
-            $mail->Username = 'enter email'; // Your email
-            $mail->Password = 'enter app password'; // Your app password
+            $mail->Username = 'example@gmail.com'; // Your email
+            $mail->Password = 'password'; // Your app password
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
             // Email Settings
-            $mail->setFrom('weemandra8@gmail.com', 'Super Admin');
+            $mail->setFrom('example@gmail.com', 'Super Admin');
             $mail->addAddress($email);
             $mail->isHTML(true);
             $mail->Subject = "Your Login Details for UNIEMLS";

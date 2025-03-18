@@ -41,13 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['delete_user'])) {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // SMTP server
             $mail->SMTPAuth = true;
-            $mail->Username = 'example@gmail.com'; // Your email
-            $mail->Password = 'password'; // Your app password
+            $mail->Username = 'need to add email here'; // Your email
+            $mail->Password = 'need to add password here'; // Your app password
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
             // Email Settings
-            $mail->setFrom('example@gmail.com', 'Super Admin');
+            $mail->setFrom('neeed to add email here', 'Super Admin');
             $mail->addAddress($email);
             $mail->isHTML(true);
             $mail->Subject = "Your Login Details for UNIEMLS";
@@ -98,6 +98,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['delete_user'])) {
                 $insertStmt->execute();
                 $insertStmt->close();
             }
+
+            // Update registration table status to 'approved'
+            $updateRegistrationQuery = "UPDATE registration SET status = 'Approved' WHERE email = ?";
+            $updateRegistrationStmt = $conn->prepare($updateRegistrationQuery);
+            $updateRegistrationStmt->bind_param("s", $email);
+            $updateRegistrationStmt->execute();
+            $updateRegistrationStmt->close();
 
             $checkUserStmt->close();
 
@@ -275,10 +282,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
             </form><br>
 
             <h3 class="mt-4">Registered Users</h3><br>
-            <input type="text" id="search" class="search-bar" placeholder="Search by Name, Role,..." onkeyup="searchData()">
+            <input type="text" id="search" class="search-bar" placeholder="Search by ID, Role,..." onkeyup="searchData()">
 
             <!-- Updated Approved User Details Table -->
-            <table id="user-table" class="table table-striped table-bordered">
+            <table id="" class="table table-striped table-bordered">
                 <thead class="table-dark">
                     <tr>
                         <th>ID</th>
@@ -289,7 +296,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="user-table">
                     <?php
                     $userQuery = "SELECT id, username, email, role, created_at FROM users";
                     $userResult = $conn->query($userQuery);
@@ -403,23 +410,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
             <script>
                 // JavaScript function to filter the data based on search input
                 function searchData() {
-                    const searchValue = document.getElementById("search").value.toLowerCase();
-                    const rows = document.getElementById("user-table").getElementsByTagName("tr");
+                    let value = document.getElementById("search").value.toLowerCase();
+                    let rows = document.querySelectorAll("#user-table tr");
 
-                    for (let i = 1; i < rows.length; i++) { // Skip header row
-                        let row = rows[i];
-                        let columns = row.getElementsByTagName("td");
-                        let match = false;
+                    rows.forEach(row => {
+                        let id = row.cells[0].textContent.toLowerCase(); // ID Column
+                        let username = row.cells[1].querySelector("input").value.toLowerCase(); // Username Column (input field)
+                        let email = row.cells[2].querySelector("input").value.toLowerCase(); // Email Column (input field)
+                        let role = row.cells[3].textContent.toLowerCase(); // Role Column
+                        let createdAt = row.cells[4].textContent.toLowerCase(); // Created At Column
 
-                        for (let j = 0; j < columns.length; j++) {
-                            if (columns[j].innerText.toLowerCase().includes(searchValue)) {
-                                match = true;
-                                break;
-                            }
-                        }
-
-                        row.style.display = match ? "" : "none";
-                    }
+                        let rowText = id + " " + username + " " + email + " " + role + " " + createdAt;
+                        row.style.display = rowText.indexOf(value) > -1 ? "" : "none";
+                    });
                 }
             </script>
         </div>

@@ -4,6 +4,13 @@
 ## Overview
 The Smart Campus Management System is designed to streamline the management of campus resources, schedules, and communication between students, lecturers, and administrators. This system provides a user-friendly interface for different user roles, including Super Admin, Admin, Students, and Lecturers.
 
+## Members work brake downs
+- Waruna Munasinghe (Leader): Develop all admin pages (frontend + backend)
+- Tharushi Dissanayake: Develop all super admin pages (frontend + backend)
+- Anushka Perera: Develop all student pages (frontend + backend)
+- Ridmi Perera: Develop main homepage, new users registration page, users login page, admin login page (frontend + backend)
+- Usitha Anasala: Develop all lecturer pages (frontend + backend)
+
 ## Features
 
 ### Super Admin Features

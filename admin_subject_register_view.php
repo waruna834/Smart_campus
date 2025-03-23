@@ -1,3 +1,13 @@
+//Developed by group leader Waruna Munasinghe (K2463495)
+
+//This PHP script allows an admin user to view subject registration details for both students and lecturers in a MySQL database. 
+It starts by checking if the user is logged in and has the role of "admin," then establishes a connection to the database to fetch relevant subject data. 
+The script retrieves subjects registered by students and assigned to lecturers, 
+displaying them in two separate tables with search functionality for easy filtering. 
+Each table includes columns for the name, faculty, program, subject, and registration date, 
+and it provides a user-friendly interface styled with Bootstrap. Additionally, JavaScript is used to implement real-time search capabilities, 
+allowing the admin to quickly find specific subjects by typing in the search fields.
+
 <?php
 session_start(); // Start the session to access user login details
 

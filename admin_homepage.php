@@ -1,3 +1,15 @@
+//Developed by group leader Waruna Munasinghe (K2463495)
+
+//This PHP script allows an admin user to schedule a new program by filling out a form with details such as faculty, 
+program type, subject, start date, duration, batch, classroom, and days of the week. 
+It begins by checking if the user is logged in and has the role of "admin," and 
+then establishes a connection to a MySQL database to store the program details. 
+Upon form submission, the script calculates the end date based on the start date and duration, 
+and inserts the program information into the program_schedule table in the database. 
+The HTML structure includes a navigation bar displaying the logged-in user's information and links to other admin functionalities, 
+as well as a form styled with CSS for a user-friendly interface. 
+Additionally, JavaScript is used to dynamically calculate and display the end date based on the input duration, enhancing the user experience.
+
 <?php
 session_start();
 

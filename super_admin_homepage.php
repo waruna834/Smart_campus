@@ -1,3 +1,14 @@
+//Developed by group member Tharushi Dissanayake (K2462662)
+
+//This PHP script serves as a super admin homepage, 
+allowing the super admin to view and manage user registration details while ensuring that only logged-in super admins can access the page. 
+It connects to a MySQL database to fetch user information and displays it in a table format, 
+including details such as full name, email, phone, and status, with options to delete records. 
+Before deleting a user, the script checks if the user's status is "Approved" and prevents deletion if it is, 
+providing feedback through JavaScript alerts. 
+The page includes a search functionality that allows the super admin to filter through the displayed user submissions in real-time. 
+Additionally, it features a modal for viewing images of ID and payment receipts, enhancing the user experience with interactive elements.
+
 <?php
 session_start();
 

@@ -1,3 +1,13 @@
+//Developed by group member Tharushi Dissanayake (K2462662)
+
+//This PHP script manages an announcement system for a super admin user, 
+ensuring that only logged-in super admins can access the page. 
+It establishes a connection to a MySQL database and handles form submissions to insert new announcements and 
+delete existing ones based on user actions. The announcements are displayed in a table format, 
+showing the title, content, creation date, and an option to delete each announcement. 
+The page is styled using Bootstrap and custom CSS, providing a user-friendly interface with a responsive design. 
+Finally, the script closes the database connection after rendering the HTML content.
+
 <?php
 session_start();
 

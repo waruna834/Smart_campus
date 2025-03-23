@@ -1,3 +1,15 @@
+//Developed by group member Tharushi Dissanayake (K2462662)
+
+//This PHP script allows a super admin to manage user accounts by sending login details via email and updating user information in a MySQL database. 
+It utilizes the PHPMailer library to send emails securely through SMTP, 
+including user-specific login information and a generated password. 
+The script checks if the user already exists in the database, 
+updating their details if they do, or inserting a new record if they do not, 
+while also marking their registration status as "Approved." Additionally, 
+the script provides a user interface for searching registered users, 
+updating their usernames and emails via AJAX, and deleting users while preventing the deletion of super admin accounts. 
+The page is styled with Bootstrap for a responsive design, and JavaScript is used for dynamic interactions, such as generating passwords and filtering user data.
+
 <?php
 session_start();
 require 'vendor/autoload.php'; // Include PHPMailer

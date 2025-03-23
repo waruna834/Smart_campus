@@ -1,3 +1,14 @@
+//Developed by group leader Waruna Munasinghe (K2463495)
+
+//This PHP script is designed for an admin user to delete events from a MySQL database, 
+ensuring that only logged-in admins can access the functionality. 
+It starts by checking the session to confirm that the user is logged in and has the role of "admin"; 
+if not, it redirects them to the login page. Upon receiving a POST request with an event ID, 
+the script prepares a SQL DELETE statement to remove the specified event from the database. 
+It executes the statement and provides feedback through JavaScript alerts, 
+notifying the user whether the deletion was successful or if an error occurred. Finally, 
+the script redirects the user back to the event management page after the operation is completed.
+
 <?php
 session_start();
 

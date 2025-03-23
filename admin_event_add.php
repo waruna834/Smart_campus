@@ -1,3 +1,14 @@
+//Developed by group leader Waruna Munasinghe (K2463495)
+
+//This PHP script allows an admin user to register new events and view a list of registered events in a MySQL database. 
+It starts by checking if the user is logged in and has the role of "admin"; 
+if not, it redirects them to the login page. The script processes form submissions to add new events, 
+capturing details such as event name, date, time, location, and maximum attendees, 
+and then inserts this data into the database. Additionally, it retrieves and displays all registered events in a table format, 
+providing an option to delete events through a separate form submission. 
+The page is styled with Bootstrap and custom CSS for a user-friendly interface, 
+and it includes JavaScript to set the minimum date for the event date input to today's date.
+
 <?php
 session_start();
 

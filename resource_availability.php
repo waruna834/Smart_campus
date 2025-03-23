@@ -1,3 +1,14 @@
+//Developed by group leader Waruna Munasinghe (K2463495)
+
+//This PHP script allows an admin user to view and manage the availability of resources, such as rooms, in a MySQL database. 
+It starts by checking if the user is logged in and has the role of "admin," 
+then establishes a connection to the database to fetch resource availability data, which is displayed in a table format. 
+Each row in the table shows the floor, room name, and current status (available or unavailable) of the resources, 
+along with a button to toggle the status. 
+When the toggle button is clicked, 
+an AJAX request is sent to a separate PHP script (update_resource_status.php) to update the status in the database without refreshing the page. 
+The page is styled with Bootstrap and custom CSS for a clean and user-friendly interface, enhancing the overall experience for the admin user.
+
 <?php
 session_start();
 

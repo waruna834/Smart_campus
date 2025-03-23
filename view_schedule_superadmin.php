@@ -1,3 +1,14 @@
+//Developed by group member Tharushi Dissanayake (K2462662)
+
+//This PHP script allows a super admin to view the program schedule from a MySQL database, 
+ensuring that only authorized users can access the information. 
+It establishes a connection to the database, retrieves all program schedule data, 
+and stores it in an array for display. The HTML structure includes a navigation bar, 
+a search input field, and a table that presents the program schedule details, such as faculty, 
+program type, subject, and status. A JavaScript function enables real-time filtering of the table based on user input in the search field, 
+allowing the super admin to quickly find specific entries. The page is styled with CSS for a clean and user-friendly interface, 
+enhancing the overall experience of managing program schedules.
+
 <?php
 session_start();
 

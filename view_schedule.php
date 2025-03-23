@@ -1,3 +1,14 @@
+//Developed by group leader Waruna Munasinghe (K2463495)
+
+//This PHP script allows an admin user to view and manage the program schedule in a MySQL database. 
+It starts by checking if the user is logged in and has the role of "admin," 
+then establishes a connection to the database to fetch all program schedule data, which is displayed in a table format. 
+The table includes details such as faculty, program type, subject, start and end dates, duration, batch, classroom, days of the week, start and end times, 
+and the current status of each program. Admins can edit the status of a program or delete a program entry directly from the table, 
+with confirmation prompts to prevent accidental deletions. 
+Additionally, the script includes a search functionality that allows admins to filter the displayed programs based on various criteria, 
+enhancing usability and efficiency.
+
 <?php
 session_start();
 

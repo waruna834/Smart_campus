@@ -1,3 +1,14 @@
+//Developed by group leader Waruna Munasinghe (K2463495)
+
+//This PHP script enables an admin user to send messages to other users (super admins, lecturers, and students) and 
+view received messages from the database. It starts by checking if the user is logged in and has the role of "admin," 
+then establishes a connection to a MySQL database to handle message storage and retrieval. 
+The script processes form submissions to send messages, including optional file attachments, 
+and validates the file type before uploading it to a designated directory. 
+It also fetches and displays the messages sent to the admin in a table format, 
+allowing for real-time searching through the messages based on sender or role. 
+Additionally, JavaScript is used to mark messages as read when clicked, enhancing user interaction and experience.
+
 <?php
 session_start();
 

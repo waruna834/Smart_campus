@@ -1,3 +1,16 @@
+//Developed by group member Tharushi Dissanayake (K2462662)
+
+//This PHP script provides a messaging system for a super admin, 
+allowing them to send messages to admin users and view received messages. 
+It establishes a connection to a MySQL database, where it handles the sending of messages, 
+including optional file attachments, and checks for valid file types before uploading. 
+The script fetches a list of admin users to populate a dropdown for selecting message recipients and 
+retrieves messages sent to the super admin, displaying them in a table format. Additionally, 
+it includes a search feature that allows the super admin to filter messages by sender or role, 
+and it marks messages as read when clicked, updating the database via an AJAX request. 
+The page is styled with CSS for a user-friendly interface, 
+ensuring a responsive design and clear visual feedback for actions taken.
+
 <?php
 session_start();
 
